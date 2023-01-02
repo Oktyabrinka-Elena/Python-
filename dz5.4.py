@@ -3,28 +3,28 @@
 
 text = input("Введите текст для сжатия: ")
 
-def zip_text(txt):
+def zip_text(text):
     count = 1
     res = ''
-    for i in range(len(txt)-1):
-        if txt[i] == txt[i+1]:
+    for i in range(len(text)-1):
+        if text[i] == text[i+1]:
             count += 1
         else:
-            res = res + str(count) + txt[i]
+            res = res + str(count) + text[i]
             count = 1
-    if count > 1 or (txt[len(txt)-2] != txt[-1]):
-        res = res + str(count) + txt[-1]
+    if count > 1 or (text[len(text)-2] != text[-1]):
+        res = res + str(count) + text[-1]
     return res
 
-def unzip_text(txt):
-    number = ''
+def unzip_text(text):
+    Num = ''
     res = ''
-    for i in range(len(txt)):
-        if not txt[i].isalpha():
-            number += txt[i]
+    for i in range(len(text)):
+        if not text[i].isalpha():
+            Num += text[i]
         else:
-            res = res + txt[i] * int(number)
-            number = ''
+            res = res + text[i] * int(Num)
+            Num = ''
     return res
 
 
