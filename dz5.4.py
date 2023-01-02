@@ -1,7 +1,9 @@
 # Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
 # Входные и выходные данные хранятся в отдельных текстовых файлах.
 
-def coding(txt):
+text = input("Введите текст для сжатия: ")
+
+def zip_text(txt):
     count = 1
     res = ''
     for i in range(len(txt)-1):
@@ -14,7 +16,7 @@ def coding(txt):
         res = res + str(count) + txt[-1]
     return res
 
-def decoding(txt):
+def unzip_text(txt):
     number = ''
     res = ''
     for i in range(len(txt)):
@@ -26,6 +28,5 @@ def decoding(txt):
     return res
 
 
-s = input("Введите текст для кодировки: ")
-print(f"Текст после кодировки: {coding(s)}")
-print(f"Текст после дешифровки: {decoding(coding(s))}")
+print(f"Сжатый текст: {zip_text(text)}")
+print(f"Текст восстановленный: {unzip_text(zip_text(text))}")
