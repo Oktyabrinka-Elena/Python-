@@ -19,19 +19,19 @@
 
 import random
 
-print("Добро пожаловать в игру 'Орел и решка'")
-podbr=int(input("Сколько раз хотите подбросить монету?"))
+print("Игра 'Орел и решка'")
+Popytki=int(input("Сколько раз хотите подбросить монету?"))
 raz=0
-orel=0
-rejka=0
-while raz<podbr:
-    pir=random.randint(1,2)
+O=0 
+R=0
+while raz<Popytki:
+    Itog=random.randint(1,2)
     raz+=1
-    if pir==1:
-        orel+=1
-    elif pir==2:
-        rejka+=1
+    if Itog==1:
+        O+=1
+    elif Itog==2:
+        R+=1
 
-print("Орел выпал",orel,"раз")
+print("Орел выпал",O,"раз ")
 
-print("Решка выпала",rejka,"раз")
+print("Решка выпала",R,"раз")
