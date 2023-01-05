@@ -33,5 +33,4 @@ while raz<Popytki:
         R+=1
 
 print("Орел выпал",O,"раз ")
-
 print("Решка выпала",R,"раз")
